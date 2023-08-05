@@ -49,12 +49,12 @@ function displayWeatherCard1(currentWeather) {
                 <div class="country">Country: ${currentWeather.location.country}</div>
                 <div class="region">Region: ${currentWeather.location.region}</div>
                 <div class="weather-main d-flex align-items-center gap-4">
-                    <div class="weather-main-degree">${Math.floor(currentWeather.current.feelslike_c)}<sup>o</sup>C</div>
+                    <div class="weather-main-degree">${Math.floor(currentWeather.forecast.forecastday[0].day.maxtemp_c)}<sup>o</sup>C</div>
                     <div class="weather-main-icon">
-                        <img src="${currentWeather.current.condition.icon}" alt='weather-icon'/>
+                        <img src="${currentWeather.forecast.forecastday[0].day.condition.icon}" alt='weather-icon'/>
                     </div>
                 </div>
-                <div class="weather-desc mb-3">${currentWeather.current.condition.text}</div>
+                <div class="weather-desc mb-3">${currentWeather.forecast.forecastday[0].day.condition.text}</div>
                 <div class="weather-summary d-flex gap-3">
                     <div>
                         <span class="fa-solid fa-umbrella"></span>
